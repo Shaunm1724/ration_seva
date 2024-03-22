@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ration_seva/pages/discover.dart';
-import 'package:ration_seva/pages/home.dart';
-import 'package:ration_seva/pages/notifications.dart';
-import 'package:ration_seva/pages/orders.dart';
 
 class NavBar extends StatefulWidget {
   final int currentPageIndex;
