@@ -14,11 +14,12 @@ class NavBar extends StatefulWidget {
 
 class _NavBarState extends State<NavBar> {
   // int currentPI = currentPageIndex;
-  List<Widget> pages = [
-    const Home(),
-    const Discover(),
-    const Orders(),
-    const Notifications()
+  List<String> pages = [
+    '/home',
+    '/discover',
+    '/orders',
+    '/notifications'
+
   ];
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,7 @@ class _NavBarState extends State<NavBar> {
         //     currentPageIndex = index;
         //   },
         // );
-        Navigator.push(context, MaterialPageRoute(builder: (context) => pages[index],));
+        Navigator.pushNamed(context, pages[index]);
       },
       indicatorColor: const Color(0xffffffff),
       selectedIndex: widget.currentPageIndex,
