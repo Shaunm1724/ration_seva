@@ -10,21 +10,39 @@ class NavBar extends StatefulWidget {
 
 class _NavBarState extends State<NavBar> {
   // int currentPI = currentPageIndex;
-  List<String> pages = [
-    '/home',
-    '/discover',
-    '/orders',
-    '/notifications'
-
-  ];
+  List<String> pages = ['/home', '/discover', '/orders', '/notifications'];
   @override
   Widget build(BuildContext context) {
     return NavigationBar(
-      destinations: const <Widget>[
-        NavigationDestination(icon: Icon(Icons.home_outlined, color: Color(0xFFB5CF5B),), label: 'Home'),
-        NavigationDestination(icon: Icon(Icons.manage_search_outlined, color: Color(0xffB5CF5B),), label: 'Discover'),
-        NavigationDestination(icon: Icon(Icons.currency_rupee_outlined, color: Color(0xffB5CF5B),), label: 'Orders'),
-        NavigationDestination(icon: Icon(Icons.notifications_outlined, color: Color(0xffB5CF5B),), label: 'Notifications')
+      destinations: const [
+        NavigationDestination(
+          icon: Icon(
+            Icons.home_outlined,
+            color: Color(0xFFB5CF5B),
+          ),
+          label: 'Home',
+        ),
+        NavigationDestination(
+          icon: Icon(
+            Icons.manage_search_outlined,
+            color: Color(0xffB5CF5B),
+          ),
+          label: 'Discover',
+        ),
+        NavigationDestination(
+          icon: Icon(
+            Icons.currency_rupee_outlined,
+            color: Color(0xffB5CF5B),
+          ),
+          label: 'Orders',
+        ),
+        NavigationDestination(
+          icon: Icon(
+            Icons.notifications_outlined,
+            color: Color(0xffB5CF5B),
+          ),
+          label: 'Notifications',
+        )
       ],
       onDestinationSelected: (int index) {
         // setState(
