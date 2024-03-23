@@ -11,7 +11,6 @@ class HomeBlock extends StatelessWidget {
       required this.block_route,
       required this.block_title});
 
-  // Take in the icon: String, title: String, route: String
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -21,6 +20,13 @@ class HomeBlock extends StatelessWidget {
         decoration: BoxDecoration(
           color: Color(0xffFFFFFF),
           borderRadius: BorderRadius.all(Radius.circular(30)),
+          boxShadow: const [
+            BoxShadow(
+              offset: Offset(0, 4),
+              blurRadius: 4,
+              color: Color(0xffbdbdc1),
+            ),
+          ],
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
