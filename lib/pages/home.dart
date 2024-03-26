@@ -14,7 +14,11 @@ class Home extends StatelessWidget {
       body: GridView(
         gridDelegate:
             SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-        children: [
+        children: const [
+          HomeBlock(
+              icon_type: Icons.shopping_cart_outlined,
+              block_route: '/home',
+              block_title: 'Shopping'),
           HomeBlock(
             icon_type: Icons.history_outlined,
             block_title: 'Past Orders',
@@ -24,10 +28,6 @@ class Home extends StatelessWidget {
               icon_type: Icons.chat,
               block_route: '/notifications',
               block_title: 'Information'),
-          HomeBlock(
-              icon_type: Icons.live_help_outlined,
-              block_route: '/notifications',
-              block_title: 'FAQ'),
           HomeBlock(
               icon_type: Icons.qr_code_2_outlined,
               block_route: '/notifications',

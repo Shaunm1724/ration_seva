@@ -12,6 +12,11 @@ class Notifications extends StatelessWidget {
       bottomNavigationBar: NavBar(
         currentPageIndex: 3,
       ),
+      appBar: AppBar(
+        title: Text(
+          'Notifications',
+        ),
+      ),
     );
   }
 }
