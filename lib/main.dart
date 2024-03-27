@@ -4,8 +4,15 @@ import 'package:ration_seva/pages/home.dart';
 import 'package:ration_seva/pages/item_description.dart';
 import 'package:ration_seva/pages/notifications.dart';
 import 'package:ration_seva/pages/orders.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 

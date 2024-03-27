@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1057514468980",
+    "project_id": "ration-seva",
+    "storage_bucket": "ration-seva.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057514468980:android:515c993d0b94b33340c321",
+        "android_client_info": {
+          "package_name": "com.example.ration_seva"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfTDcoeEYRM7e7FFxDS-AgzUkREBEPPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
