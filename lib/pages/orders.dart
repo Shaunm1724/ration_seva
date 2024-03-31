@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ration_seva/components/items.dart';
 import 'package:ration_seva/components/navbar.dart';
 
+import '../components/gopaymentbutton.dart';
+
 class Orders extends StatelessWidget {
   const Orders({Key? key});
 
@@ -18,7 +20,7 @@ class Orders extends StatelessWidget {
             Container(
               height: 180,
               width: 350,
-              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 25),
+              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
               decoration: BoxDecoration(
                 color: Color(0xffFFFFFF),
                 borderRadius: BorderRadius.all(Radius.circular(30)),
@@ -30,6 +32,20 @@ class Orders extends StatelessWidget {
                   ),
                 ],
               ),
+              child: Center(
+                child: Text(
+                  'Select the items you want...',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ),
+            ),
+            ProceedToPaymentButton(
+              block_route: '/payments',
+              onPressed: () {},
             ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 18, vertical: 6),
@@ -38,9 +54,8 @@ class Orders extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(30)),
               ),
               child: ListView(
-                shrinkWrap: true, // Add shrinkWrap: true to ListView
-                physics:
-                    NeverScrollableScrollPhysics(), // Disable scrolling of ListView
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
                 children: [
                   item_block(
                     imagePath: 'images/Madhubani Saree.webp',

@@ -17,7 +17,7 @@ class Home extends StatelessWidget {
         children: const [
           HomeBlock(
               icon_type: Icons.shopping_cart_outlined,
-              block_route: '/home',
+              block_route: '/orders',
               block_title: 'Shopping'),
           HomeBlock(
             icon_type: Icons.history_outlined,
