@@ -20,7 +20,7 @@ class item_block extends StatelessWidget {
     return GestureDetector(
       onTap: () => Navigator.pushNamed(context, block_route),
       child: Container(
-        height: 120,
+        height: 140,
         width: 60,
         margin: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         decoration: BoxDecoration(
@@ -28,7 +28,7 @@ class item_block extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(30)),
           boxShadow: const [
             BoxShadow(
-              offset: Offset(0, 4),
+              offset: Offset(0, 8),
               blurRadius: 4,
               color: Color(0xffbdbdc1),
             ),
@@ -42,8 +42,8 @@ class item_block extends StatelessWidget {
               children: [
                 Container(
                   margin: EdgeInsets.only(left: 20.0, right: 50.0),
-                  height: 70,
-                  width: 70,
+                  height: 90,
+                  width: 90,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(500),
                   ),

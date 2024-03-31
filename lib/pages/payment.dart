@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:ration_seva/components/addtolist.dart'; // Import the Addtolist widget
-import 'package:ration_seva/components/expandable_button.dart'; // Import the ExpandableButton widget
-import 'package:ration_seva/components/navbar.dart';
+import 'package:ration_seva/components/changecolour.dart';
 
-import '../components/descriptions.dart';
 import '../components/items.dart';
+import '../components/navbar.dart';
+import '../components/selectpayment.dart';
 
-class item_desc extends StatelessWidget {
-  const item_desc({Key? key}) : super(key: key);
+class Payment extends StatelessWidget {
+  const Payment({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +19,14 @@ class item_desc extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(
-              child: item_info(
-                imagePath: 'images/Madhubani Saree.webp',
-                block_title: 'item1',
-                block_description: 'description',
-                block_price: 'Rs.400',
-              ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 10, 20, 15),
+              child: PaymentButton(),
+            ), // Use ExpandableButton widget
+
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 15),
+              child: CustomButton(title: 'Proceed', route: '/notifications'),
             ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 18, vertical: 0),
@@ -38,14 +38,7 @@ class item_desc extends StatelessWidget {
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 15),
-                    child: ExpandableButton(), // Use ExpandableButton widget
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 15),
-                    child: AddToListButton(),
-                  ), // Use addtolist widget
+                  // Use addtolist widget
                   Container(
                     height: 50,
                     width: 60,
@@ -63,7 +56,7 @@ class item_desc extends StatelessWidget {
                     ),
                     child: Center(
                       child: Text(
-                        'Similar Products',
+                        'Your List',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold),
