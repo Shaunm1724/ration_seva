@@ -26,24 +26,26 @@ class LoginBelowText extends StatelessWidget {
   final String preText;
   final String route;
   final String lORr;
-  const LoginBelowText({super.key, required this.preText, required this.route, required this.lORr});
+  const LoginBelowText({
+    super.key,
+    required this.preText,
+    required this.route,
+    required this.lORr,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text('Already a User?'),
+        Text(preText),
         const SizedBox(width: 5),
         GestureDetector(
-          onTap: () => Navigator.pushNamed(context, preText),
-          child: GestureDetector(
-            onTap: () => Navigator.pushNamed(context, route),
-            child: Text(
-              lORr,
-              style: TextStyle(
-                color: Colors.blue[700],
-              ),
+          onTap: () => Navigator.pushNamed(context, route),
+          child: Text(
+            lORr,
+            style: TextStyle(
+              color: Colors.blue[700],
             ),
           ),
         )

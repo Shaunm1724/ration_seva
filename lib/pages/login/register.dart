@@ -14,33 +14,33 @@ class Register extends StatefulWidget {
 class _RegisterState extends State<Register> {
   final AuthenticateService _auth = AuthenticateService();
 
-  final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _confpass = TextEditingController();
 
   @override
   void dispose() {
-    _usernameController.dispose();
     _passwordController.dispose();
     _emailController.dispose();
+    _confpass.dispose();
     super.dispose();
   }
 
-
   void _signup() async {
-    String username = _usernameController.text;
     String email = _emailController.text;
     String password = _passwordController.text;
-    // print(username);
+    String confirmPassword = _confpass.text;
 
-    User? user = await _auth.signUpWithEmailAndPassword(email, password);
+    if (confirmPassword == password) {
+      User? user = await _auth.signUpWithEmailAndPassword(email, password);
 
-    if (user != null) {
-      print('User is succesfully created!');
-      Navigator.pushNamed(context, '/home');
-    } else {
-      print('Some error occured!');
-    }
+      if (user != null) {
+        print('User is succesfully created!');
+        Navigator.pushNamed(context, '/home');
+      } else {
+        print('Some error occured!');
+      }
+    } else {}
   }
 
   @override
@@ -57,12 +57,6 @@ class _RegisterState extends State<Register> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             LoginFormText(
-              placeholder: 'Enter Username',
-              isPassword: false,
-              textEditingController: _usernameController,
-            ),
-            const SizedBox(height: 20),
-            LoginFormText(
               placeholder: 'Enter Email',
               isPassword: false,
               textEditingController: _emailController,
@@ -72,6 +66,12 @@ class _RegisterState extends State<Register> {
               placeholder: 'Enter Password',
               isPassword: true,
               textEditingController: _passwordController,
+            ),
+            const SizedBox(height: 20),
+            LoginFormText(
+              placeholder: 'Confirm Password',
+              isPassword: true,
+              textEditingController: _confpass,
             ),
             const SizedBox(height: 20),
             GestureDetector(

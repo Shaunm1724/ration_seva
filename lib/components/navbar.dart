@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 
 class NavBar extends StatefulWidget {
   final int currentPageIndex;
-  const NavBar({super.key, required this.currentPageIndex});
+  const NavBar({
+    super.key,
+    required this.currentPageIndex,
+  });
 
   @override
   State<NavBar> createState() => _NavBarState();
