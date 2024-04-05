@@ -70,8 +70,9 @@ class _LoginState extends State<Login> {
             ),
             const SizedBox(height: 20),
             const LoginBelowText(
-              preText: 'New User?',
+              preText: 'Existing User?',
               route: '/register',
+              lORr: 'Register',
             )
           ],
         ),

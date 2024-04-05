@@ -25,7 +25,8 @@ class LoginSubmitButton extends StatelessWidget {
 class LoginBelowText extends StatelessWidget {
   final String preText;
   final String route;
-  const LoginBelowText({super.key, required this.preText, required this.route});
+  final String lORr;
+  const LoginBelowText({super.key, required this.preText, required this.route, required this.lORr});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,7 @@ class LoginBelowText extends StatelessWidget {
           child: GestureDetector(
             onTap: () => Navigator.pushNamed(context, route),
             child: Text(
-              'Login',
+              lORr,
               style: TextStyle(
                 color: Colors.blue[700],
               ),

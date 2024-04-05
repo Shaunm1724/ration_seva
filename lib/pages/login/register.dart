@@ -82,6 +82,7 @@ class _RegisterState extends State<Register> {
             const LoginBelowText(
               preText: 'Already a User?',
               route: '/login',
+              lORr: 'Login',
             ),
           ],
         ),
