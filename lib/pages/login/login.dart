@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:ration_seva/components/Login/login_submit_button.dart';
 import 'package:ration_seva/components/Login/login_text_field.dart';
 import 'package:ration_seva/services/auth.dart';
@@ -15,8 +14,8 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   final AuthenticateService _auth = AuthenticateService();
 
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   void dispose() {
