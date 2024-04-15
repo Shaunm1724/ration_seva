@@ -81,3 +81,63 @@ class item_block extends StatelessWidget {
     );
   }
 }
+
+class Rice extends StatelessWidget {
+  const Rice({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const item_block(
+      imagePath: 'images/Madhubani Saree.webp',
+      block_route: '/item_description',
+      block_title: 'Rice',
+      block_description: 'A versatile staple',
+      block_price: 'Rs.20',
+    );
+  }
+}
+
+class Wheat extends StatelessWidget {
+  const Wheat({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const item_block(
+      imagePath: 'images/wheat.jpg',
+      block_route: '/item_description1',
+      block_title: 'Wheat Flour',
+      block_description: 'Fundamental for chapatis',
+      block_price: 'Rs.30',
+    );
+  }
+}
+
+class Salt extends StatelessWidget {
+  const Salt({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return item_block(
+      imagePath: 'images/table Salt .jpg',
+      block_route: '/item_description2',
+      block_title: 'Salt',
+      block_description: 'Add seasoning to your food ',
+      block_price: 'Rs.125',
+    );
+  }
+}
+
+class Sugar extends StatelessWidget {
+  const Sugar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return item_block(
+      imagePath: 'images/sugar.jpg',
+      block_route: '/item_description3',
+      block_title: 'Sugar',
+      block_description: 'Adding sweetness to food',
+      block_price: 'Rs.150',
+    );
+  }
+}

@@ -56,35 +56,11 @@ class Orders extends StatelessWidget {
               child: ListView(
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),
-                children: [
-                  item_block(
-                    imagePath: 'images/Madhubani Saree.webp',
-                    block_route: '/item_description',
-                    block_title: 'item1',
-                    block_description: 'description',
-                    block_price: 'Rs.400',
-                  ),
-                  item_block(
-                    imagePath: 'images/Madhubani Saree.webp',
-                    block_route: '/item_description',
-                    block_title: 'item1',
-                    block_description: 'description',
-                    block_price: 'Rs.400',
-                  ),
-                  item_block(
-                    imagePath: 'images/Madhubani Saree.webp',
-                    block_route: '/item_description',
-                    block_title: 'item1',
-                    block_description: 'description',
-                    block_price: 'Rs.400',
-                  ),
-                  item_block(
-                    imagePath: 'images/Madhubani Saree.webp',
-                    block_route: '/item_description',
-                    block_title: 'item1',
-                    block_description: 'description',
-                    block_price: 'Rs.400',
-                  ),
+                children: const [
+                  Rice(),
+                  Wheat(),
+                  Salt(),
+                  Sugar(),
                 ],
               ),
             ),

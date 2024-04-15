@@ -22,11 +22,11 @@ class Home extends StatelessWidget {
           HomeBlock(
             icon_type: Icons.history_outlined,
             block_title: 'Past Orders',
-            block_route: '/discover',
+            block_route: '/notifications',
           ),
           HomeBlock(
               icon_type: Icons.chat,
-              block_route: '/notifications',
+              block_route: '/discover',
               block_title: 'Information'),
           HomeBlock(
               icon_type: Icons.qr_code_2_outlined,

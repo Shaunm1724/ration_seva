@@ -8,6 +8,7 @@ import 'package:ration_seva/pages/login/register.dart';
 import 'package:ration_seva/pages/notifications.dart';
 import 'package:ration_seva/pages/orders.dart';
 import 'package:ration_seva/pages/payment.dart';
+import 'package:ration_seva/pages/qr.dart';
 import 'package:ration_seva/wrapper.dart';
 import 'firebase_options.dart';
 
@@ -34,10 +35,15 @@ class MyApp extends StatelessWidget {
         '/orders': (context) => const Orders(),
         '/notifications': (context) => const Notifications(),
         '/item_description': (context) => const item_desc(),
+        '/item_description1': (context) => const item_desc1(),
+        '/item_description2': (context) => const item_desc2(),
+        '/item_description3': (context) => const item_desc3(),
         '/payments': (context) => const Payment(),
         '/wrapper': (context) => const Wrapper(),
         '/login': (context) => const Login(),
         '/register': (context) => const Register(),
+        '/qr1': (context) => const QR(),
+        '/qr2': (context) => const QR1(),
       },
     );
   }
