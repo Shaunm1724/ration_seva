@@ -67,6 +67,11 @@ class AuthenticateService {
     return null;
   }
 
+  // Sign out
+  void signOut() async {
+    _auth.signOut();
+  }
+
 
   // creating user
   final user = FirebaseAuth.instance.currentUser;
