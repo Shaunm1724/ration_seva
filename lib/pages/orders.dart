@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ration_seva/components/Common/drawer.dart';
 import 'package:ration_seva/components/items.dart';
-import 'package:ration_seva/components/navbar.dart';
+import 'package:ration_seva/components/Common/navbar.dart';
 
 import '../components/gopaymentbutton.dart';
 
@@ -14,6 +15,23 @@ class Orders extends StatelessWidget {
       bottomNavigationBar: NavBar(
         currentPageIndex: 2,
       ),
+      appBar: AppBar(
+      title: Text('Orders'),
+      actions: [
+        Center(
+          widthFactor: 3,
+          child: GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, '/payments');
+            },
+            child: const Icon(Icons.shopping_bag_outlined),
+          ),
+        ),
+      ],
+      backgroundColor: const Color(0xffF4F3F9),
+      elevation: 0.0,
+    ),
+      drawer: DrawerWidget(),
       body: SingleChildScrollView(
         child: Column(
           children: [

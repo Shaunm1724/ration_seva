@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ration_seva/components/changecolour.dart';
 
 import '../components/items.dart';
-import '../components/navbar.dart';
+import '../components/Common/navbar.dart';
 import '../components/selectpayment.dart';
 
 class Payment extends StatelessWidget {

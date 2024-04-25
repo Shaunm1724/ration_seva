@@ -1,9 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:ration_seva/components/Common/drawer.dart';
 import 'package:ration_seva/components/Notification/choice_button.dart';
 import 'package:ration_seva/components/Notification/notification_tile.dart';
-import 'package:ration_seva/components/navbar.dart';
+import 'package:ration_seva/components/Common/navbar.dart';
 import 'package:ration_seva/services/firestore.dart';
 
 class Notifications extends StatefulWidget {
@@ -15,7 +16,6 @@ class Notifications extends StatefulWidget {
 
 class _NotificationsState extends State<Notifications> {
   final db = FireStoreDataBase();
-  
 
   String choice = 'active';
 
@@ -27,11 +27,22 @@ class _NotificationsState extends State<Notifications> {
         currentPageIndex: 3,
       ),
       appBar: AppBar(
-        title: Text(
-          'Notifications',
-        ),
-        elevation: 0,
+        title: Text('Notifications'),
+        actions: [
+          Center(
+            widthFactor: 3,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/payments');
+              },
+              child: const Icon(Icons.shopping_bag_outlined),
+            ),
+          ),
+        ],
+        backgroundColor: const Color(0xffF4F3F9),
+        elevation: 0.0,
       ),
+      drawer: DrawerWidget(),
       body: ListView(
         scrollDirection: Axis.vertical,
         padding: EdgeInsets.all(5),

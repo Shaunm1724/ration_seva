@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ration_seva/components/addtolist.dart'; // Import the Addtolist widget
 import 'package:ration_seva/components/expandable_button.dart'; // Import the ExpandableButton widget
-import 'package:ration_seva/components/navbar.dart';
+import 'package:ration_seva/components/Common/navbar.dart';
 
 import '../components/descriptions.dart';
 import '../components/items.dart';
