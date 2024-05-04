@@ -52,6 +52,9 @@ dependencies:
   meta:
   collection:
   url_launcher: ^6.0.6
+  geolocator: ^11.0.0
+  permission_handler:
+
 
 
 dev_dependencies:

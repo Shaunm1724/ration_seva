@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:ration_seva/components/Common/navbar.dart';
-import 'package:url_launcher/url_launcher.dart';
 
+import '../components/map.dart';
 import 'shops.dart';
 
 class Discover extends StatelessWidget {
@@ -48,31 +48,7 @@ class _MapAppState extends State<MapApp> {
     return Scaffold(
       body: Stack(
         children: [
-          FlutterMap(
-            options: MapOptions(
-              initialCenter: LatLng(19.08192, 72.8867),
-              initialZoom: 15,
-            ),
-            children: [
-              TileLayer(
-                urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                userAgentPackageName: 'com.example.app',
-              ),
-              MarkerLayer(
-                markers: getMarkers(),
-              ),
-              RichAttributionWidget(
-                attributions: [
-                  TextSourceAttribution(
-                    'OpenStreetMap contributors',
-                    onTap: () => launchUrl(
-                      Uri.parse('https://openstreetmap.org/copyright'),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
+          MapPage(),
           Positioned(
             left: 20,
             right: 20,
