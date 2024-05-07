@@ -25,7 +25,7 @@ class item_desc extends StatelessWidget {
                 imagePath: 'images/Madhubani Saree.webp',
                 block_title: 'Rice',
                 block_description:
-                    'A versatile staple known for its comforting texture and ability to complement a variety of dishes.',
+                    'A versatile staple in every meal.',
                 block_price: 'Rs.20',
               ),
             ),
@@ -103,7 +103,7 @@ class item_desc1 extends StatelessWidget {
                 imagePath: 'images/wheat.jpg',
                 block_title: 'Wheat',
                 block_description:
-                    'A fundamental ingredient for bread, chapatis, and various baked goods.',
+                    'A fundamental ingredient for bread, chapatis.',
                 block_price: 'Rs.30',
               ),
             ),
